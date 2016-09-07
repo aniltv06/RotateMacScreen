@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="6233" systemVersion="14A329f" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="10116" systemVersion="15G1004" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="6233"/>
+        <deployment identifier="macosx"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="10116"/>
     </dependencies>
     <objects>
         <customObject id="-2" userLabel="File's Owner" customClass="NSApplication">
@@ -11,7 +12,7 @@
         </customObject>
         <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
         <customObject id="-3" userLabel="Application" customClass="NSObject"/>
-        <customObject id="Voe-Tx-rLC" customClass="AppDelegate" customModuleProvider="target">
+        <customObject id="Voe-Tx-rLC" customClass="AppDelegate" customModule="RotateMacScreen" customModuleProvider="target">
             <connections>
                 <outlet property="window" destination="QvC-M9-y7g" id="gIp-Ho-8D9"/>
             </connections>
@@ -19,11 +20,11 @@
         <customObject id="YLy-65-1bz" customClass="NSFontManager"/>
         <menu title="Main Menu" systemMenu="main" id="AYu-sK-qS6">
             <items>
-                <menuItem title="Rotate" id="1Xt-HY-uBw">
+                <menuItem title="RotateMacScreen" id="1Xt-HY-uBw">
                     <modifierMask key="keyEquivalentModifierMask"/>
-                    <menu key="submenu" title="Rotate" systemMenu="apple" id="uQy-DD-JDr">
+                    <menu key="submenu" title="RotateMacScreen" systemMenu="apple" id="uQy-DD-JDr">
                         <items>
-                            <menuItem title="About Rotate" id="5kV-Vb-QxS">
+                            <menuItem title="About RotateMacScreen" id="5kV-Vb-QxS">
                                 <modifierMask key="keyEquivalentModifierMask"/>
                                 <connections>
                                     <action selector="orderFrontStandardAboutPanel:" target="-1" id="Exp-CZ-Vem"/>
@@ -37,7 +38,7 @@
                                 <menu key="submenu" title="Services" systemMenu="services" id="hz9-B4-Xy5"/>
                             </menuItem>
                             <menuItem isSeparatorItem="YES" id="4je-JR-u6R"/>
-                            <menuItem title="Hide Rotate" keyEquivalent="h" id="Olw-nP-bQN">
+                            <menuItem title="Hide RotateMacScreen" keyEquivalent="h" id="Olw-nP-bQN">
                                 <connections>
                                     <action selector="hide:" target="-1" id="PnN-Uc-m68"/>
                                 </connections>
@@ -55,7 +56,7 @@
                                 </connections>
                             </menuItem>
                             <menuItem isSeparatorItem="YES" id="kCx-OE-vgT"/>
-                            <menuItem title="Quit Rotate" keyEquivalent="q" id="4sb-4s-VLi">
+                            <menuItem title="Quit RotateMacScreen" keyEquivalent="q" id="4sb-4s-VLi">
                                 <connections>
                                     <action selector="terminate:" target="-1" id="Te7-pn-YzF"/>
                                 </connections>
@@ -656,7 +657,7 @@
                     <modifierMask key="keyEquivalentModifierMask"/>
                     <menu key="submenu" title="Help" systemMenu="help" id="F2S-fz-NVQ">
                         <items>
-                            <menuItem title="Rotate Help" keyEquivalent="?" id="FKE-Sm-Kum">
+                            <menuItem title="RotateMacScreen Help" keyEquivalent="?" id="FKE-Sm-Kum">
                                 <connections>
                                     <action selector="showHelp:" target="-1" id="y7X-2Q-9no"/>
                                 </connections>
@@ -666,15 +667,58 @@
                 </menuItem>
             </items>
         </menu>
-        <window title="Rotate" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" animationBehavior="default" id="QvC-M9-y7g">
+        <window title="RotateMacScreen" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" animationBehavior="default" id="QvC-M9-y7g">
             <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
             <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
-            <rect key="contentRect" x="335" y="390" width="480" height="360"/>
-            <rect key="screenRect" x="0.0" y="0.0" width="1920" height="1177"/>
+            <rect key="contentRect" x="335" y="390" width="272" height="177"/>
+            <rect key="screenRect" x="0.0" y="0.0" width="1920" height="1057"/>
             <view key="contentView" wantsLayer="YES" id="EiT-Mj-1SZ">
-                <rect key="frame" x="0.0" y="0.0" width="480" height="360"/>
+                <rect key="frame" x="0.0" y="0.0" width="272" height="177"/>
                 <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <button identifier="0" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8ZS-95-QA3">
+                        <rect key="frame" x="31" y="104" width="86" height="32"/>
+                        <buttonCell key="cell" type="push" title="0" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="ofK-SV-jxE">
+                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                            <font key="font" metaFont="system"/>
+                        </buttonCell>
+                        <connections>
+                            <action selector="buttonTapped:" target="Voe-Tx-rLC" id="zaS-sI-4A5"/>
+                        </connections>
+                    </button>
+                    <button identifier="90" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Tom-qO-ncZ">
+                        <rect key="frame" x="162" y="104" width="86" height="32"/>
+                        <buttonCell key="cell" type="push" title="90" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="yQQ-mP-RLy">
+                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                            <font key="font" metaFont="system"/>
+                        </buttonCell>
+                        <connections>
+                            <action selector="buttonTapped:" target="Voe-Tx-rLC" id="taz-xU-n5U"/>
+                        </connections>
+                    </button>
+                    <button identifier="180" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="SIE-g8-5JV">
+                        <rect key="frame" x="31" y="45" width="86" height="32"/>
+                        <buttonCell key="cell" type="push" title="180" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="VYo-XD-d8y">
+                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                            <font key="font" metaFont="system"/>
+                        </buttonCell>
+                        <connections>
+                            <action selector="buttonTapped:" target="Voe-Tx-rLC" id="bgt-LP-7xd"/>
+                        </connections>
+                    </button>
+                    <button identifier="270" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wY4-0h-fdY">
+                        <rect key="frame" x="162" y="45" width="86" height="32"/>
+                        <buttonCell key="cell" type="push" title="270" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="cw9-sa-DrK">
+                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                            <font key="font" metaFont="system"/>
+                        </buttonCell>
+                        <connections>
+                            <action selector="buttonTapped:" target="Voe-Tx-rLC" id="WYe-KC-VAg"/>
+                        </connections>
+                    </button>
+                </subviews>
             </view>
+            <point key="canvasLocation" x="418" y="274.5"/>
         </window>
     </objects>
 </document>
