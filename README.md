@@ -8,6 +8,9 @@ You can rotate screen to 90, 180 and 270 degree orientations.
 # Rotate Mac Screen App Usage #
 ![Animated walkthrough of the app](Assets/walkThrough.gif)
 
+#Download Rotate Mac Screen App #
+![Download App](App/RotateMacScreen.zip)
+
 checkout this screencast on [how to Use](http://recordit.co/OQAnSbDPdk)
 
 Interact with C API Example
