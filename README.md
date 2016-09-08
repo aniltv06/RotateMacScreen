@@ -17,7 +17,7 @@ fileName.swift
 var variableName: Int = 0
 cFuncCall(&variableName)
 
-println(variableName)
+print(variableName)
 ```
 fileName.c
 ```c
