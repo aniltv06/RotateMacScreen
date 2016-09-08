@@ -14,8 +14,8 @@ Interact with C API Example
 
 fileName.swift
 ```swift
-var variableName: CInt = 0
-getInput(&variableName)
+var variableName: Int = 0
+cFuncCall(&variableName)
 
 println(variableName)
 ```
