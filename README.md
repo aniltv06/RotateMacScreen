@@ -24,7 +24,7 @@ fileName.c
 #include <stdio.h>
 
 void cFuncCall(int *variableName) {
-    scanf("%i", variableName);
+    fprintf("%i", variableName);
 }
 ```
 input-Bridging-Header.h
