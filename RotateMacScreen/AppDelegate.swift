@@ -15,15 +15,15 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     @IBOutlet weak var window: NSWindow!
 
 
-    func applicationDidFinishLaunching(aNotification: NSNotification) {
+    func applicationDidFinishLaunching(_ aNotification: Notification) {
         // Insert code here to initialize your application
     }
 
-    func applicationWillTerminate(aNotification: NSNotification) {
+    func applicationWillTerminate(_ aNotification: Notification) {
         // Insert code here to tear down your application
     }
 
-    @IBAction func buttonTapped(button:NSButton)
+    @IBAction func buttonTapped(_ button:NSButton)
     {
         //let angleToRotate : String = button.identifier!
         print(button.identifier)
@@ -41,7 +41,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         }
     }
 
-    func applicationShouldTerminateAfterLastWindowClosed(sender: NSApplication) -> Bool{
+    func applicationShouldTerminateAfterLastWindowClosed(_ sender: NSApplication) -> Bool{
         return true
     }
 }
